@@ -8,3 +8,13 @@ export const isLoadingSelector = createSelector(
     selectFeature,
     (state: PostsStateInterface) => state.isLoading
 )
+
+export const isSuccessSelector = createSelector(
+    selectFeature,
+    (state: PostsStateInterface) => state.posts
+)
+
+export const isFailureSelector = createSelector(
+    selectFeature,
+    (state: PostsStateInterface) => state.error
+)
