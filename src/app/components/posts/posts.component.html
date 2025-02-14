@@ -1,3 +1,11 @@
 @if (isLoading$ | async) {
-    <div>Loading</div>
+<div>Loading</div>
+}
+
+@if (error$ | async; as error) {
+<div>{{error}}</div>
+}
+
+@for (post of posts$ | async; track $index) {
+<div>{{post.title}}</div>
 }
